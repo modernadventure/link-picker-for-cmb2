@@ -11,7 +11,7 @@ jQuery( document ).ready( function( $ ) {
 		event.stopPropagation();
 		url            = $( this ).closest( '.link-picker' ).find( 'input.cmb_text_url' );
 		text           = $( this ).closest( '.link-picker' ).find( 'input.cmb_text' );
-		blank          = $( this ).closest( '.link-picker' ).find( 'input.cmb_checkbox' );
+		blank          = $( this ).closest( '.link-picker' ).find( 'select.cmb_checkbox' );
 		wpActiveEditor = 'mkdo_lpfc_placeholder';
 		wpLink.open( 'mkdo_lpfc_placeholder' );
 		wpLink.textarea = url;
@@ -38,9 +38,9 @@ jQuery( document ).ready( function( $ ) {
 		}
 
 		if ( linkAtts.target == '_blank' ) {
-			blank.prop( 'checked', true );
+                        blank.val( 'true' );
 		} else {
-			blank.prop( 'checked', false );
+			blank.val( 'false' );
 		}
 
 		wpLink.textarea = url;

@@ -163,7 +163,7 @@ class Render_Meta_Box {
 				<p>
 					<label><?php esc_html_e( 'Choose', 'link-picker-for-cmb2' );?></label>
 				</p>
-				<button class="dashicons dashicons-admin-links js-insert-link button button-primary" title="<?php esc_html_e( 'Insert Link', 'link-picker-for-cmb2' ); ?>">
+				<button id="<?php echo $field_type_object->_id( '_choose' ); ?>" class="dashicons dashicons-admin-links js-insert-link button button-primary" title="<?php esc_html_e( 'Insert Link', 'link-picker-for-cmb2' ); ?>">
 	 				<span class="screen-reader-text">
 						<?php esc_html_e( 'Choose Link', 'link-picker-for-cmb2' ); ?>
 					</span>
