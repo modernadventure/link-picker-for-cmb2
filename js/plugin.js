@@ -1,13 +1,13 @@
 jQuery( document ).ready( function( $ ) {
 
-	/* Open the Link Window*/
+	/* Open the Link Window */
 
 	var url   = $( 'body' );
 	var text  = $( 'body' );
 	var blank = $( 'body' );
 
 	$( 'body' ).on( 'click', '.js-insert-link', function( event ) {
-		event.preventDefault ? event.preventDefault() : event.returnValue = false;
+                event.preventDefault ? event.preventDefault() : event.returnValue = false;
 		event.stopPropagation();
 		url            = $( this ).closest( '.link-picker' ).find( 'input.cmb_text_url' );
 		text           = $( this ).closest( '.link-picker' ).find( 'input.cmb_text' );
@@ -20,6 +20,11 @@ jQuery( document ).ready( function( $ ) {
 	} );
 
 	$( 'body' ).on( 'click', '#wp-link-cancel, #wp-link-backdrop, #wp-link-close', function( event ) {
+                // Avoid hijacking the standard wp link-picker
+                if ( window.wpActiveEditor != 'mkdo_lpfc_placeholder' ) {
+                  return;
+                }
+
 		wpLink.textarea = url;
 		wpLink.close();
 		event.preventDefault ? event.preventDefault() : event.returnValue = false;
@@ -28,6 +33,10 @@ jQuery( document ).ready( function( $ ) {
 	} );
 
 	$( 'body' ).on( 'click', '#wp-link-submit', function( event ) {
+                // Avoid hijacking the standard wp link-picker
+                if ( window.wpActiveEditor != 'mkdo_lpfc_placeholder' ) {
+                  return;
+                }
 
 		var linkAtts = wpLink.getAttrs();
 		linkAtts.text = $( '#wp-link-text' ).val();
@@ -50,7 +59,7 @@ jQuery( document ).ready( function( $ ) {
 		return false;
 	} );
 
-	/* Deal with columns and sizes */
+    /* Deal with columns and sizes */
 
     function adjust_element_size() {
 		$( '.link-picker div' ).attr( 'style','' );
