@@ -37,7 +37,7 @@ class Controller_Assets {
 
 		/* CSS */
 		$plugin_css_url = plugins_url( 'css/plugin.css', MKDO_LPFC_ROOT );
-		wp_enqueue_style( 'link-picker-for-cmb2', $plugin_css_url );
+		wp_enqueue_style( 'link-picker-for-cmb2', $plugin_css_url, array(), '1.3.0' );
 
 		/* Media */
 		if ( isset( $post_id ) && $post_id <> 0 ) {
@@ -46,6 +46,6 @@ class Controller_Assets {
 
 		/* JS */
 		$plugin_js_url  = plugins_url( 'js/plugin.js', MKDO_LPFC_ROOT );
-		wp_enqueue_script( 'link-picker-for-cmb2', $plugin_js_url, array( 'jquery', 'jquery-ui-core', 'jquery-ui-draggable', 'jquery-ui-droppable', 'thickbox', 'wpdialogs', 'wplink' ), '1.2.0', true );
+		wp_enqueue_script( 'link-picker-for-cmb2', $plugin_js_url, array( 'jquery', 'jquery-ui-core', 'jquery-ui-draggable', 'jquery-ui-droppable', 'thickbox', 'wpdialogs', 'wplink' ), '1.3.0', true );
 	}
 }
