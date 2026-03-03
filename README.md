@@ -60,6 +60,7 @@ printf(
 
 ## Changelog
 
+**1.3.1** - *03.03.2026* - Fix textdomain path, harden markup escaping, modernize JS editor handling/comparisons  
 **1.3.0** - *26.04.2024* - Fixed a bug where the native WP link picker was being hijacked  
 **1.2.1** - *17.03.2017* - Added new artwork  
 **1.2.0** - *27.01.2017* - WP Coding Standards, We got em! - Now passes those pesky WP Coding Standards  

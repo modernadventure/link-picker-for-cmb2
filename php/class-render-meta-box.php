@@ -58,7 +58,7 @@ class Render_Meta_Box {
 		<div class="link-picker">
 			<div class="text">
 				<p>
-					<label for="<?php echo esc_attr( $field_type_object->_id( '_text' ) ); ?>'">
+					<label for="<?php echo esc_attr( $field_type_object->_id( '_text' ) ); ?>">
 						<?php echo esc_html( $field_type_object->_text( 'link_picker_text', 'Text' ) ); ?>
 					</label>
 				</p>
@@ -89,7 +89,7 @@ class Render_Meta_Box {
 			</div>
 			<div class="url">
 				<p>
-					<label for="<?php echo esc_attr( $field_type_object->_id( '_url' ) ); ?>'">
+					<label for="<?php echo esc_attr( $field_type_object->_id( '_url' ) ); ?>">
 						<?php echo esc_html( $field_type_object->_text( 'link_picker_url', 'URL' ) ); ?>
 					</label>
 				</p>
@@ -121,7 +121,7 @@ class Render_Meta_Box {
 			</div>
 			<div class="blank">
 				<p>
-					<label for="<?php echo esc_attr( $field_type_object->_id( '_blank' ) ); ?>'">
+					<label for="<?php echo esc_attr( $field_type_object->_id( '_blank' ) ); ?>">
 						<?php echo esc_html( $field_type_object->_text( 'link_picker_blank', 'Window' ) ); ?>
 					</label>
 				</p>
@@ -163,7 +163,7 @@ class Render_Meta_Box {
 				<p>
 					<label><?php esc_html_e( 'Choose', 'link-picker-for-cmb2' );?></label>
 				</p>
-				<button id="<?php echo $field_type_object->_id( '_choose' ); ?>" class="dashicons dashicons-admin-links js-insert-link button button-primary" title="<?php esc_html_e( 'Insert Link', 'link-picker-for-cmb2' ); ?>">
+				<button id="<?php echo esc_attr( $field_type_object->_id( '_choose' ) ); ?>" class="dashicons dashicons-admin-links js-insert-link button button-primary" title="<?php esc_html_e( 'Insert Link', 'link-picker-for-cmb2' ); ?>">
 	 				<span class="screen-reader-text">
 						<?php esc_html_e( 'Choose Link', 'link-picker-for-cmb2' ); ?>
 					</span>

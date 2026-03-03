@@ -12,7 +12,7 @@ jQuery( document ).ready( function( $ ) {
 		url            = $( this ).closest( '.link-picker' ).find( 'input.cmb_text_url' );
 		text           = $( this ).closest( '.link-picker' ).find( 'input.cmb_text' );
 		blank          = $( this ).closest( '.link-picker' ).find( 'select.cmb_checkbox' );
-		wpActiveEditor = 'mkdo_lpfc_placeholder';
+		window.wpActiveEditor = 'mkdo_lpfc_placeholder';
 		wpLink.open( 'mkdo_lpfc_placeholder' );
 		wpLink.textarea = url;
 
@@ -21,7 +21,7 @@ jQuery( document ).ready( function( $ ) {
 
 	$( 'body' ).on( 'click', '#wp-link-cancel, #wp-link-backdrop, #wp-link-close', function( event ) {
                 // Avoid hijacking the standard wp link-picker
-                if ( window.wpActiveEditor != 'mkdo_lpfc_placeholder' ) {
+                if ( window.wpActiveEditor !== 'mkdo_lpfc_placeholder' ) {
                   return;
                 }
 
@@ -34,7 +34,7 @@ jQuery( document ).ready( function( $ ) {
 
 	$( 'body' ).on( 'click', '#wp-link-submit', function( event ) {
                 // Avoid hijacking the standard wp link-picker
-                if ( window.wpActiveEditor != 'mkdo_lpfc_placeholder' ) {
+                if ( window.wpActiveEditor !== 'mkdo_lpfc_placeholder' ) {
                   return;
                 }
 
@@ -42,11 +42,11 @@ jQuery( document ).ready( function( $ ) {
 		linkAtts.text = $( '#wp-link-text' ).val();
 		url.val( linkAtts.href );
 
-		if ( linkAtts.text != '' ) {
+		if ( linkAtts.text !== '' ) {
 			text.val( linkAtts.text );
 		}
 
-		if ( linkAtts.target == '_blank' ) {
+		if ( linkAtts.target === '_blank' ) {
                         blank.val( 'true' );
 		} else {
 			blank.val( 'false' );
@@ -65,7 +65,7 @@ jQuery( document ).ready( function( $ ) {
 		$( '.link-picker div' ).attr( 'style','' );
 		$( '.cmb-type-link-picker' ).each( function() {
 			url       = $( this ).find( 'input.cmb_text_url' );
-			container = $( this ).find( '.link-picker' );
+			var container = $( this ).find( '.link-picker' );
 			if( url.width() < 150 ) {
 				container.find( 'div' ).each( function() {
 						$( this ).css( 'width', '50%' );

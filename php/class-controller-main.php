@@ -41,7 +41,7 @@ class Controller_Main {
 	 * Do Work
 	 */
 	public function run() {
-		load_plugin_textdomain( 'link-picker-for-cmb2', false, MKDO_LPFC_ROOT . '\languages' );
+		load_plugin_textdomain( 'link-picker-for-cmb2', false, dirname( plugin_basename( MKDO_LPFC_ROOT ) ) . '/languages' );
 
 		$this->controller_assets->run();
 		$this->render_meta_box->run();
