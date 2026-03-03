@@ -4,7 +4,7 @@ Donate link:
 Tags: link, link picker, cmb2
 Requires at least: 4.5
 Tested up to: 6.5.2
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -75,8 +75,13 @@ printf(
 
 == Changelog ==
 
+= 1.3.1 =
+* Fix textdomain path
+* Harden markup escaping
+* Modernize JS editor handling/comparisons
+
 = 1.3.0 =
-Fixed a bug where the native WP link picker was being hijacked
+* Fixed a bug where the native WP link picker was being hijacked
 
 = 1.2.1 =
 * Added new artwork
