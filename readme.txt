@@ -4,7 +4,7 @@ Donate link:
 Tags: link, link picker, cmb2
 Requires at least: 4.5
 Tested up to: 6.5.2
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,6 +74,10 @@ printf(
 6. Setting a field to have split values
 
 == Changelog ==
+
+= 1.3.2 =
+* Scope admin asset loading to common edit screens with filter to customize allowed hooks
+* Remove unused script dependencies and use plugin version constant for cache-busting
 
 = 1.3.1 =
 * Fix textdomain path
